@@ -1,0 +1,137 @@
+<!-- coderxiaoluo  不要停止我的代码 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 1px solid #000;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 500px;
+      margin: 0 auto;
+
+    }
+
+    .pagination ul {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+
+    }
+
+    .active {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="pagination">
+    <span class="first">首页</span>
+    <span class="prev">上一页</span>
+
+    <ul class="pageList">
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+    <span class="next">下一页</span>
+    <span class="last">尾页</span>
+  </div>
+  <table>
+
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>班级</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Jack</td>
+        <td>男</td>
+        <td>20</td>
+        <td>3班</td>
+        <td><button>删除</button></td>
+      </tr>
+    </tbody>
+
+  </table>
+
+
+  <script>
+    const pageList = document.querySelector(".pageList")
+    const pervBtn = document.querySelector(".prev")
+    const nextBtn = document.querySelector(".next")
+    const firstBtn = document.querySelector(".first")
+    const lastBtn = document.querySelector(".last")
+    const tbody = document.querySelector("tbody")
+
+    function randoms(a, b) {
+
+      const MAX = Math.max(a, b)
+      const MIN = Math.min(a, b)
+      const result = Math.floor(Math.random() * (MAX - MIN + 1) + MIN)
+      return result
+    }
+
+
+    var userList = []
+    const str1 = "罗赵谦孙俪周武之王张"
+    const str2 = "一二三四五六七八九十"
+    const str3 = "男女"
+    for (let i = 0; i < 123; i++) {
+      userList.push({
+        id: i + 1,
+        username: str1[randoms(0, 9)] + str1[randoms(0, 9)],
+        gender: str3[randoms(0, 1)],
+        age: randoms(18, 25),
+        class: randoms(2001, 2003)
+      })
+    }
+    const totlePage = Math.ceil(userList.length / 11)
+
+    // 
+    const flg = document.createDocumentFragment()
+    
+
+
+  </script>
+
+</body>
+
+</html>

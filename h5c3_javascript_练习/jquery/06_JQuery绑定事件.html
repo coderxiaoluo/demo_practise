@@ -1,0 +1,99 @@
+<!-- coderxiaoluo  不要停止我的代码 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 500px;
+      height: 500px;
+      border: 1px solid #000;
+      margin: 100px auto;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      height: 40px;
+      background: skyblue
+    }
+
+    ul>li {
+      flex: 1;
+      line-height: 40px;
+      cursor: pointer;
+      border: 1px solid #000;
+    }
+
+    ul>li.active {
+      background-color: tomato;
+    }
+
+    ol {
+      width: 100%;
+      height: calc(100% - 40px);
+      position: relative;
+      text-align: center;
+      color: #fff;
+      font-size: 50px;
+    }
+
+    ol>li {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: none;
+
+    }
+
+    ol>li.active {
+      display: block;
+      background: tomato;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul>
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ol>
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+    </ol>
+  </div>
+  <button>按钮</button>
+  <script src="./utils/jquery.min.js"></script>
+  <script>
+
+    $("ul>li").on("click", function () {
+      $(this).addClass("active").siblings().removeClass("active")
+      $("ol>li").removeClass("active").eq($(this).index()).addClass("active")
+    })
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!-- coderxiaoluo  不要停止我的代码 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script src="./utils/jquery.min.js"></script>
+  <script>
+    $(".box").click({ name: "code" }, function (e) {
+      console.log(e)
+    })
+    $(".box").hover(function () {
+      console.log(1)
+    }, function () {
+      console.log(2)
+    })
+
+
+  </script>
+
+</body>
+
+</html>

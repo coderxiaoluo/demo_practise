@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <video src="视频地址"></video>
+
+  <video>
+    <source src="视频源" type="video/mp4">
+    <source src="视频源" type="video/ogg">
+    <source src="视频源" type="video/avi">
+  </video> -->
+
+  <audio src="./许巍 - 故乡.mp3" controls autostart autoplay style="height: 0;"></audio>
+
+  <button class="Setvloume">设置音量</button>
+
+  <script>
+    window.onload = function () {
+      audio.volume = 0.2
+
+    }
+
+    const audio = document.querySelector("audio")
+
+
+    /*     audio.addEventListener("canplay", function () {
+          console.log("可以播放了")
+          console.log(this)
+        })
+    
+        audio.addEventListener("timeupdate", function () {
+        })
+    
+    
+        audio.addEventListener("ended", function () {
+          console.log("结束")
+        }) */
+    const Setvloume = document.querySelector(".Setvloume")
+    Setvloume.addEventListener("click", () => {
+      audio.volume = 0.1
+      // console.log(audio.duration)
+    })
+
+    audio.addEventListener("timeupdate", function () {
+      // console.log(this.paused)
+
+      // console.log(this.currentTime)
+
+      // console.log(this.volume)
+    })
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <audio id="voice" loop src="./许巍 - 故乡.mp3" id="audio" autoplay preload="auto">该浏览器不支持audio属性</audio>
+
+  <script>
+    var voice = document.getElementById('voice');
+
+    voice.play();   //调用播放
+    //判断 WeixinJSBridge 是否存在
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+      voice.play();
+    } else {
+      //监听客户端抛出事件 "WeixinJSBridgeReady"
+      if (document.addEventListener) {
+        document.addEventListener("WeixinJSBridgeReady", function () {
+          voice.play();
+        }, false);
+      } else if (document.attachEvent) {
+        document.attachEvent("WeixinJSBridgeReady", function () {
+          voice.play();
+        });
+        document.attachEvent("onWeixinJSBridgeReady", function () {
+          voice.play();
+        });
+      }
+    }
+  </script>
+</body>
+
+</html>

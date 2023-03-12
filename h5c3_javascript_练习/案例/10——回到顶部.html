@@ -1,0 +1,78 @@
+<!-- coderxiaoluo  不要停止我的代码 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      height: 3000px;
+
+    }
+
+    .topBar {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      color: #fff;
+      background: tomato;
+      position: fixed;
+      font-size: 30px;
+      left: 0;
+      top: 0;
+      display: none;
+      transition: display .8s ease-in 0s;
+    }
+
+    .topBar.active {
+      display: block;
+    }
+
+    .goTop {
+      width: 50px;
+      height: 50px;
+      background-color: skyblue;
+      position: fixed;
+      right: 50px;
+      bottom: 50px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topBar">Top</div>
+  <div class="goTop"></div>
+  <script>
+    const goTop = document.querySelector(".goTop")
+    const topBar = document.querySelector(".topBar")
+
+    goTop.addEventListener("click", () => {
+      scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    })
+
+    window.onscroll = function () {
+      if (scrollY <= 100) {
+        topBar.classList.add("active")
+      } else {
+        topBar.classList.remove("active")
+      }
+     }
+  </script>
+
+</body>
+
+</html>

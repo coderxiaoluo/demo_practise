@@ -1,0 +1,49 @@
+<!-- coderxiaoluo  不要停止我的代码 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <div class="parent">
+    <div>div1</div>
+    <div>div2</div>
+    <div class="box3">div3</div>
+    <div>div4</div>
+    <div class="box5">div5</div>
+    <div>div6</div>
+    <div>div7</div>
+    <div>div8</div>
+  </div>
+
+
+  <script src="./utils/jquery.min.js"></script>
+  <script>
+    // console.log($("ul >li").first().css("color", "red"))
+    // $("ul>li").eq("2").css("color", "red")
+    // $("div").first().next().css("color", "red")
+    // $("div").first().nextAll().css("color", "red")
+    // $("div").nextAll(".box2").css("color", "skyblue")
+    // console.log($("div").first())
+    // console.log($("div").nextUntil(".box2"))
+    // $("div").first().nextUntil(".box2").css("color", "red")
+
+    // $(".box5").prev().css("color", "red")
+    // $(".box5").prevAll().css("color", "red");
+    // $(".box5").prevAll(".box3").css("color", "skyblue")
+
+    // $(".box5").prevUntil(".box3").css("color", "red")
+    // console.log($(".box3").parent())
+    // console.log($(".parent").children())
+
+    console.log($(".box3").siblings(".box5"))
+  </script>
+
+</body>
+
+</html>

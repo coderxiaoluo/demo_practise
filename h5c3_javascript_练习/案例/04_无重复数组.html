@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+  <script>
+    const _getUniqueNums = (start, end, n) => {
+      // 补全代码
+      let arr = []
+      while (arr.length < n) {
+        const randoms = Math.floor((Math.random() * (start - end) + 1) + end)
+
+        if (!arr.includes(randoms)) {
+          arr.push(randoms)
+        }
+      }
+      return arr
+
+    }
+
+    _getUniqueNums(10, 20, 5)
+  </script>
+</body>
+
+</html>

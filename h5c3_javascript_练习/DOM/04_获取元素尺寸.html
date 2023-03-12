@@ -1,0 +1,60 @@
+<!-- coderxiaoluo  不要停止我的代码 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script>
+    /*
+        offsetWidth offsetHeight       clientWidth clientHeight
+      scroll 事件 scrollTo( {
+        behavior:"smooth"
+      }) 方法 document.documentElement.scrollTop  属性 卷去的高度
+
+      append perpend before after remove() 
+      firstElementChild lastElementChild   parentElement parent parentElement
+
+      innerWidth innerHeight location.href = ""  history.go() 
+
+      array :
+        push pop unshift shift reverse() sort() splice slice join indexOf forEach lastIndexOf map filter every 
+
+        push pop unshift shift reveres sort splice slice join indexOf includes forEach lastIndexOf map filter every ...
+
+      string : 
+        charAt substring slice split concat indexOf lastIndexOf includes trim trimStart trimEnd 
+
+      date:
+        const time = new Date()
+
+        time.getFullyear()
+        time.getHouse()
+           
+    */
+
+    const box = document.querySelector(".box")
+
+    console.log(box.offsetWidth)
+
+    console.log(getComputedStyle(box, null)['width'])
+
+    console.log(box.style)
+  </script>
+
+</body>
+
+</html>

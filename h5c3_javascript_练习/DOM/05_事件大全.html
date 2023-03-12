@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body,
+  :root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+<body>
+
+  <button class="loginclick">login</button>
+  <script>
+    const btn = document.querySelector(".loginclick")
+
+
+    btn.onclick = () => { }
+    btn.ondblclick = () => {
+      console.log("你哈")
+    }
+    btn.oncontextmenu = (e) => {
+      console.log("点击了")
+      e.preventDefault()
+    }
+
+    document.body.oncontextmenu = (e) => {
+      e.preventDefault()
+    }
+
+
+    document.body.onmouseup = () => {
+      console.log("11")
+    }
+  </script>
+</body>
+
+</html>

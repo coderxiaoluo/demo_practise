@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classList && className</title>
+</head>
+
+<body>
+  <div>hhhhh</div>
+  <div class="box">
+    <p>Jack</p>
+    <span>hello world</span>
+    <p>Tom</p>
+  </div>
+
+  <script>
+    const box = document.querySelector(".box")
+
+    const boxStyle = window.getComputedStyle(box)
+
+    const spanEl = box.firstElementChild
+    console.log(spanEl)
+
+    const previous = box.previousElementSibling
+    const nextElement = box.nextElementSibling
+    console.log(previous)
+    console.log(spanEl.nodeType)
+  </script>
+</body>
+
+</html>

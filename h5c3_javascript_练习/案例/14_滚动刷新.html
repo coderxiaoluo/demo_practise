@@ -1,0 +1,115 @@
+<!-- coderxiaoluo  不要停止我的代码 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    body {
+      --color1: skyblue;
+      --color2: #fff;
+      height: 100%;
+    }
+
+    body>div {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header,
+    .footer {
+      height: 300px;
+      background-color: var(--color1);
+      color: var(--color2);
+      text-align: center;
+      font-size: 100px;
+    }
+
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+
+    ul>li {
+      text-align: center;
+      width: calc((100% / 4 - 20px));
+      height: 300px;
+      margin: 10px;
+      align-self: flex-start;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">顶部</div>
+  <div class="container">
+    <ul class="list">
+      <li>01</li>
+      <li>02</li>
+      <li>03</li>
+      <li>04</li>
+      <li>05</li>
+      <li>06</li>
+      <li>07</li>
+      <li>08</li>
+      <li>09</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li>18</li>
+      <li>19</li>
+      <li>20</li>
+      <li>21</li>
+      <li>22</li>
+    </ul>
+  </div>
+  <div class="footer">尾部</div>
+  <script>
+    const listEl = document.querySelectorAll(".list > li")
+    listEl.forEach(item => {
+      item.style.background = randomColor()
+    })
+    function randomColor() {
+      function random(a, b) {
+        const MAX = Math.max(a, b)
+        const MIN = Math.min(a, b)
+        const result = Math.floor(Math.random() * (MAX - MIN + 1) + MIN)
+        return result
+      }
+      const result = `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`
+      return result
+    }
+
+    document.body.style.background = randomColor()
+    const list = document.querySelector(".list")
+    const windowHeight = document.documentElement.clientHeight
+    const scrolltops = document.documentElement.scrollTop
+    const listTops = list.offsetTop
+    console.log(scrolltops)
+    console.log(windowHeight)
+    console.log(listTops)
+  </script>
+
+</body>
+
+</html>

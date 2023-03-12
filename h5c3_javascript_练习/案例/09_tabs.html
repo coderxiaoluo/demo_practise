@@ -1,0 +1,107 @@
+<!-- coderxiaoluo  不要停止我的代码 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    .box {
+      width: 500px;
+      height: 400px;
+      border: 1px solid #000;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul>li {
+      flex: 1;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      background-color: tomato;
+      cursor: pointer;
+      border: 1px solid #000
+    }
+
+
+    ol {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    ol>li {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      text-align: center;
+      font-size: 100px;
+      display: none;
+    }
+
+    .active {
+      display: block;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul>
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ol>
+      <li class="active">1</li>
+      <li>2</li>
+      <li>3</li>
+    </ol>
+  </div>
+  <script>
+    /*
+      获取元素
+
+      
+    
+    */
+
+    const itemUl = document.querySelectorAll("ul > li")
+    const itemOl = document.querySelectorAll("ol > li")
+
+    itemUl.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        itemUl.forEach((t, i) => {
+          t.classList.remove("active")
+          itemOl[i].classList.remove("active")
+        })
+        item.classList.add('active')
+        itemOl[index].classList.add("active")
+      })
+    })
+
+
+  </script>
+
+</body>
+
+</html>

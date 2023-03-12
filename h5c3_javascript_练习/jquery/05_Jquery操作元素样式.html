@@ -1,0 +1,42 @@
+<!-- coderxiaoluo  不要停止我的代码 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" style="color: red;"></div>
+
+  <div class="box2">hello worled</div>
+
+  <div class="box3">hello world</div>
+
+  <script src="./utils/jquery.min.js"></script>
+  <script>
+    console.log($(".box").css("width"))
+    console.log($(".box").css("color"))
+
+
+    $(".box2").css("width", 200).css("height", 200).css("background-color", "skyblue")
+
+    $(".box3").css({
+      "width": 300,
+      "height": 300,
+      "background": "skyblue"
+    })
+  </script>
+
+</body>
+
+</html>
